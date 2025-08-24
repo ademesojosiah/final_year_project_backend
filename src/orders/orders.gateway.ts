@@ -6,7 +6,7 @@ import {
   ConnectedSocket,
 } from '@nestjs/websockets';
 import { Server, Socket } from 'socket.io';
-import { Order } from '../types/order.types';
+import { Order, OrderUpdateEvent } from '../types/order.types';
 
 @WebSocketGateway({
   cors: {
@@ -31,7 +31,7 @@ export class OrdersGateway {
 
   // Methods to emit events to all connected clients
   emitOrderCreated(order: Order) {
-    this.server.to('orders').emit('orderCreated', {
+    this.server.emit('orderCreated', {
       message: 'New order created',
       order,
       timestamp: new Date().toISOString(),
@@ -39,15 +39,27 @@ export class OrdersGateway {
   }
 
   emitOrderUpdated(order: Order) {
-    this.server.to('orders').emit('orderUpdated', {
+    // Emit general order updated event
+    this.server.emit('orderUpdated', {
       message: 'Order updated',
       order,
       timestamp: new Date().toISOString(),
     });
+
+    // Emit specific order update event with the format "{orderId}/update"
+    const updateEvent: OrderUpdateEvent = {
+      orderId: order.orderId,
+      status: order.status,
+      estimatedDate: order.deliverySchedule,
+      timestamp: new Date().toISOString(),
+      message: `Order ${order.orderId} status updated to ${order.status}`,
+    };
+
+    this.server.emit(`${order.orderId}/update`, updateEvent);
   }
 
   emitOrderDeleted(orderId: string) {
-    this.server.to('orders').emit('orderDeleted', {
+    this.server.emit('orderDeleted', {
       message: 'Order deleted',
       orderId,
       timestamp: new Date().toISOString(),

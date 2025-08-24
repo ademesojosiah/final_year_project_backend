@@ -8,7 +8,12 @@ export class OrdersService {
   private orders: Order[] = [...mockOrders]; // Copy mock data
 
   getAllOrders(): Order[] {
-    return this.orders;
+    // Sort orders by dateIssued (newest first)
+    return this.orders.sort((a, b) => {
+      const dateA = new Date(a.dateIssued.split('/').reverse().join('-'));
+      const dateB = new Date(b.dateIssued.split('/').reverse().join('-'));
+      return dateB.getTime() - dateA.getTime();
+    });
   }
 
   getOrderById(orderId: string): Order | undefined {
@@ -35,7 +40,8 @@ export class OrdersService {
       status: "In Production",
     };
 
-    this.orders.push(newOrder);
+    // Add new order at the beginning (newest first)
+    this.orders.unshift(newOrder);
     return newOrder;
   }
 

@@ -30,3 +30,13 @@ export interface UpdateOrderDto {
   deliverySchedule?: string;
   quantity?: number;
 }
+
+// Interface for the real-time update event data
+// Backend should send data in this format via WebSocket
+export interface OrderUpdateEvent {
+  orderId: string;                    // The order ID being updated
+  status: OrderStatus;                // New status of the order
+  estimatedDate?: string;             // Optional: Updated estimated completion date
+  timestamp: string;                  // ISO timestamp of when update occurred
+  message?: string;                   // Optional: Custom message to display to user
+}
