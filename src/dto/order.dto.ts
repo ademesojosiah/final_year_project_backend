@@ -11,6 +11,9 @@ export class CreateOrderDto {
 
   @IsEnum(['Fliers', 'OMR Sheets', 'Jotters'])
   sheetType: SheetType;
+
+  deliverySchedule: string;
+
 }
 
 export class UpdateOrderDto {
