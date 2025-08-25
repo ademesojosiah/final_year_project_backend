@@ -40,3 +40,16 @@ export interface OrderUpdateEvent {
   timestamp: string;                  // ISO timestamp of when update occurred
   message?: string;                   // Optional: Custom message to display to user
 }
+
+// Interface for the real-time order creation event data
+export interface OrderCreatedEvent {
+  orderId: string;                    // The newly created order ID
+  customerName: string;               // Customer name
+  productName: string;                // Product name
+  quantity: number;                   // Order quantity
+  sheetType: SheetType;               // Type of sheets
+  status: OrderStatus;                // Initial status (usually "In Production")
+  estimatedDate: string;              // Estimated delivery date
+  timestamp: string;                  // ISO timestamp of when order was created
+  message?: string;                   // Optional: Custom message to display to user
+}

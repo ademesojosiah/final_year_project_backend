@@ -6,7 +6,7 @@ import {
   ConnectedSocket,
 } from '@nestjs/websockets';
 import { Server, Socket } from 'socket.io';
-import { Order, OrderUpdateEvent } from '../types/order.types';
+import { Order, OrderUpdateEvent, OrderCreatedEvent } from '../types/order.types';
 
 @WebSocketGateway({
   cors: {
@@ -31,11 +31,21 @@ export class OrdersGateway {
 
   // Methods to emit events to all connected clients
   emitOrderCreated(order: Order) {
-    this.server.emit('orderCreated', {
-      message: 'New order created',
-      order,
+
+    // Emit specific order creation event with detailed data
+    const createdEvent: OrderCreatedEvent = {
+      orderId: order.orderId,
+      customerName: order.customerName,
+      productName: order.productName,
+      quantity: order.quantity,
+      sheetType: order.sheetType,
+      status: order.status,
+      estimatedDate: order.deliverySchedule,
       timestamp: new Date().toISOString(),
-    });
+      message: `New order ${order.orderId} created for ${order.customerName}`,
+    };
+
+    this.server.emit(`orderCreated`, createdEvent);
   }
 
   emitOrderUpdated(order: Order) {
