@@ -35,7 +35,7 @@ export class OrdersService {
       productName: createOrderDto.productName,
       sheetType: createOrderDto.sheetType,
       quantity: createOrderDto.quantity,
-      deliverySchedule: this.calculateDeliverySchedule(),
+      deliverySchedule: createOrderDto.deliverySchedule || this.calculateDeliverySchedule(),
       dateIssued: new Date().toLocaleDateString('en-GB'),
       status: "In Production",
     };

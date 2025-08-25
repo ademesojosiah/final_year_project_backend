@@ -40,6 +40,7 @@ export class OrdersGateway {
       quantity: order.quantity,
       sheetType: order.sheetType,
       status: order.status,
+      dateIssued: order.dateIssued,
       estimatedDate: order.deliverySchedule,
       timestamp: new Date().toISOString(),
       message: `New order ${order.orderId} created for ${order.customerName}`,

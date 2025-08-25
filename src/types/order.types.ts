@@ -23,6 +23,7 @@ export interface CreateOrderDto {
   productName: string;
   quantity: number;
   sheetType: SheetType;
+  deliverySchedule: string;
 }
 
 export interface UpdateOrderDto {
@@ -48,7 +49,8 @@ export interface OrderCreatedEvent {
   productName: string;                // Product name
   quantity: number;                   // Order quantity
   sheetType: SheetType;               // Type of sheets
-  status: OrderStatus;                // Initial status (usually "In Production")
+  status: OrderStatus;   
+  dateIssued: string;             // Initial status (usually "In Production")
   estimatedDate: string;              // Estimated delivery date
   timestamp: string;                  // ISO timestamp of when order was created
   message?: string;                   // Optional: Custom message to display to user
