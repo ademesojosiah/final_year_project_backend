@@ -3,6 +3,9 @@ import { SheetType, OrderStatus } from '../types/order.types';
 
 export class CreateOrderDto {
   @IsString()
+  customerName: string;
+
+  @IsString()
   productName: string;
 
   @IsNumber()

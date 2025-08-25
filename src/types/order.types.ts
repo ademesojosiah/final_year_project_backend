@@ -20,6 +20,7 @@ export interface Order {
 }
 
 export interface CreateOrderDto {
+  customerName: string
   productName: string;
   quantity: number;
   sheetType: SheetType;

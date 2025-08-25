@@ -31,7 +31,7 @@ export class OrdersService {
     const newOrder: Order = {
       batchId: this.generateBatchId(),
       orderId: this.generateOrderId(),
-      customerName: "josiah",
+      customerName:createOrderDto.customerName || "user",
       productName: createOrderDto.productName,
       sheetType: createOrderDto.sheetType,
       quantity: createOrderDto.quantity,
