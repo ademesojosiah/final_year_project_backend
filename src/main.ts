@@ -7,10 +7,13 @@ async function bootstrap() {
   
   // Enable CORS
   app.enableCors({
-    origin: '*', // In production, specify allowed origins
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    credentials: true,
-  });
+  origin: [
+    'https://final-year-project-orpin-six.vercel.app',    // local frontend (React/Next.js)
+ // production frontend
+  ],
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true,
+});
   
   // Enable global validation pipe
   app.useGlobalPipes(new ValidationPipe());
