@@ -8,7 +8,8 @@ async function bootstrap() {
   // Enable CORS
   app.enableCors({
   origin: [
-    'https://final-year-project-orpin-six.vercel.app',    // local frontend (React/Next.js)
+    'https://final-year-project-orpin-six.vercel.app', 
+    'http://localhost:5173'   // local frontend (React/Next.js)
  // production frontend
   ],
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',

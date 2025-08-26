@@ -9,7 +9,7 @@ export const mockOrders: Order[] = [
     sheetType: "Fliers",
     quantity: 500,
     deliverySchedule: "01/09/2025",
-    dateIssued: "25/08/2025",
+    dateIssued: "15/07/2025",
     status: "In Production",
   },
   {
@@ -20,7 +20,7 @@ export const mockOrders: Order[] = [
     sheetType: "OMR Sheets",
     quantity: 750,
     deliverySchedule: "02/09/2025",
-    dateIssued: "26/08/2025",
+    dateIssued: "16/07/2025",
     status: "In Printing",
   },
   {
@@ -31,7 +31,7 @@ export const mockOrders: Order[] = [
     sheetType: "Fliers",
     quantity: 1200,
     deliverySchedule: "July 08, 2025",
-    dateIssued: "01/07/2025",
+    dateIssued: "01/06/2025",
     status: "In Binding",
   },
   {
@@ -42,7 +42,7 @@ export const mockOrders: Order[] = [
     sheetType: "Jotters",
     quantity: 300,
     deliverySchedule: "03/09/2025",
-    dateIssued: "27/08/2025",
+    dateIssued: "17/07/2025",
     status: "In Binding",
   },
   {
@@ -53,7 +53,7 @@ export const mockOrders: Order[] = [
     sheetType: "Fliers",
     quantity: 1000,
     deliverySchedule: "04/09/2025",
-    dateIssued: "28/08/2025",
+    dateIssued: "18/07/2025",
     status: "In Production",
   },
   {
@@ -64,7 +64,7 @@ export const mockOrders: Order[] = [
     sheetType: "Fliers",
     quantity: 250,
     deliverySchedule: "05/09/2025",
-    dateIssued: "29/08/2025",
+    dateIssued: "19/07/2025",
     status: "Delivery",
   },
   {
@@ -75,7 +75,7 @@ export const mockOrders: Order[] = [
     sheetType: "Fliers",
     quantity: 800,
     deliverySchedule: "06/09/2025",
-    dateIssued: "30/08/2025",
+    dateIssued: "20/07/2025",
     status: "Packaging",
   },
   {
@@ -86,7 +86,7 @@ export const mockOrders: Order[] = [
     sheetType: "Fliers",
     quantity: 600,
     deliverySchedule: "07/09/2025",
-    dateIssued: "31/08/2025",
+    dateIssued: "21/07/2025",
     status: "In Production",
   },
   {
@@ -97,7 +97,7 @@ export const mockOrders: Order[] = [
     sheetType: "OMR Sheets",
     quantity: 450,
     deliverySchedule: "08/09/2025",
-    dateIssued: "01/09/2025",
+    dateIssued: "22/07/2025",
     status: "In Printing",
   },
   {
@@ -108,7 +108,7 @@ export const mockOrders: Order[] = [
     sheetType: "Fliers",
     quantity: 900,
     deliverySchedule: "09/09/2025",
-    dateIssued: "02/09/2025",
+    dateIssued: "23/07/2025",
     status: "In Binding",
   },
   {
@@ -119,7 +119,7 @@ export const mockOrders: Order[] = [
     sheetType: "Jotters",
     quantity: 350,
     deliverySchedule: "10/09/2025",
-    dateIssued: "03/09/2025",
+    dateIssued: "24/07/2025",
     status: "Delivery",
   },
   {
@@ -130,7 +130,7 @@ export const mockOrders: Order[] = [
     sheetType: "Fliers",
     quantity: 700,
     deliverySchedule: "11/09/2025",
-    dateIssued: "04/09/2025",
+    dateIssued: "25/07/2025",
     status: "Packaging",
   },
   {
@@ -141,7 +141,7 @@ export const mockOrders: Order[] = [
     sheetType: "Fliers",
     quantity: 550,
     deliverySchedule: "12/09/2025",
-    dateIssued: "05/09/2025",
+    dateIssued: "26/07/2025",
     status: "In Production",
   },
   {
@@ -152,7 +152,7 @@ export const mockOrders: Order[] = [
     sheetType: "Fliers",
     quantity: 850,
     deliverySchedule: "13/09/2025",
-    dateIssued: "06/09/2025",
+    dateIssued: "27/07/2025",
     status: "In Printing",
   },
   {
@@ -163,7 +163,7 @@ export const mockOrders: Order[] = [
     sheetType: "OMR Sheets",
     quantity: 400,
     deliverySchedule: "14/09/2025",
-    dateIssued: "07/09/2025",
+    dateIssued: "28/07/2025",
     status: "In Binding",
   },
   {
@@ -174,7 +174,7 @@ export const mockOrders: Order[] = [
     sheetType: "Fliers",
     quantity: 950,
     deliverySchedule: "15/09/2025",
-    dateIssued: "08/09/2025",
+    dateIssued: "29/07/2025",
     status: "Delivery",
   },
   {
@@ -185,7 +185,7 @@ export const mockOrders: Order[] = [
     sheetType: "Fliers",
     quantity: 650,
     deliverySchedule: "16/09/2025",
-    dateIssued: "09/09/2025",
+    dateIssued: "30/07/2025",
     status: "Delivery",
   },
   {
@@ -196,7 +196,7 @@ export const mockOrders: Order[] = [
     sheetType: "Jotters",
     quantity: 800,
     deliverySchedule: "17/09/2025",
-    dateIssued: "10/09/2025",
+    dateIssued: "31/07/2025",
     status: "In Production",
   },
   {
@@ -207,7 +207,7 @@ export const mockOrders: Order[] = [
     sheetType: "Fliers",
     quantity: 550,
     deliverySchedule: "18/09/2025",
-    dateIssued: "11/09/2025",
+    dateIssued: "01/08/2025",
     status: "In Printing",
   },
   {
@@ -218,7 +218,7 @@ export const mockOrders: Order[] = [
     sheetType: "OMR Sheets",
     quantity: 750,
     deliverySchedule: "19/09/2025",
-    dateIssued: "12/09/2025",
+    dateIssued: "02/08/2025",
     status: "In Binding",
   },
   {
@@ -229,7 +229,7 @@ export const mockOrders: Order[] = [
     sheetType: "Fliers",
     quantity: 600,
     deliverySchedule: "20/09/2025",
-    dateIssued: "13/09/2025",
+    dateIssued: "03/08/2025",
     status: "Delivery",
   },
 ];
